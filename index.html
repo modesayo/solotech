@@ -2,55 +2,62 @@
 <html lang="en">
 
 <head>
-  <!-- ✅ Basic SEO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solotec Electrical & Electronics Engineering Limited | Professional Solar Installation Services</title>
+  <title>Solotec Electrical & Electronics Engineering Limited | Professional Solar & Electrical Services in Nigeria
+  </title>
   <meta name="description"
-    content="Expert solar panel installation and maintenance. Reliable, affordable, and high-quality solar energy Electrical & Electronics Limited for homes and businesses. Call Solotec Electrical & Electronics Engineering Limited today!" />
-  <link rel="canonical" href="https://www.Solotec.com/" />
-
-  <!-- ✅ Open Graph -->
-  <meta property="og:title" content="Solotec Electrical & Electronics Engineering Limited | Trusted Solar Experts" />
-  <meta property="og:description"
-    content="Clean energy for homes and businesses. Save money and go green with Solotec Electrical & Electronics Engineering Limited." />
-  <meta property="og:image" content="https://www.Solotec.com/images/preview.jpg" />
-  <meta property="og:url" content="https://www.Solotec.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- ✅ Favicon -->
+    content="Expert solar panel installation, electrical wiring, and home appliance services in Nigeria. Reliable, affordable, and high-quality electrical & electronics solutions for homes and businesses. Call Solotec Electrical & Electronics Engineering Limited today!" />
+  <link rel="canonical" href="https://www.solotec.com/" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-  <!-- ✅ Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <!-- Preload critical resources -->
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style">
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* ===== RESET ===== */
+    /* ====== RESET ====== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* ===== GLOBAL ===== */
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f7f9fb;
-      color: #333;
+      background-color: #f5f7fa;
+      color: #2c3e50;
       line-height: 1.6;
-      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
+      border-radius: 6px;
       height: auto;
-      border-radius: 10px;
-      display: block;
     }
 
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       font-family: 'Playfair Display', serif;
-      color: #003f7f;
+      color: #1a252f;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
     }
 
     main {
@@ -59,15 +66,36 @@
       padding: 2rem 1rem;
     }
 
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+      font-weight: 700;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 3px;
+      background: #7f8c8d;
+      display: block;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
     /* ===== HEADER ===== */
     header {
-      background-color: #0056b3;
+      background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
       color: #fff;
       padding: 1rem 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
 
     .navbar-container {
@@ -82,7 +110,16 @@
     .logo {
       font-size: 1.8rem;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo i {
+      color: #ecf0f1;
+      font-size: 1.6rem;
     }
 
     nav ul {
@@ -95,112 +132,198 @@
       color: #fff;
       text-decoration: none;
       font-weight: 500;
-      transition: opacity 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0;
     }
 
-    nav a:hover {
-      opacity: 0.8;
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ecf0f1;
+      transition: 0.3s;
     }
 
-    @media (max-width: 700px) {
-      .navbar-container {
-        flex-direction: column;
-        gap: 0.75rem;
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* Mobile Navigation */
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
       }
+
       nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #1a252f;
+        padding: 5rem 2rem 2rem;
+        z-index: 999;
+        overflow-y: auto;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li {
+        margin-bottom: 1.5rem;
+      }
+
+      nav ul li a {
+        font-size: 1.2rem;
+        padding: 0.8rem 0;
+        display: block;
+      }
+
+      .close-menu {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
       }
     }
 
     /* ===== HERO ===== */
     #hero {
-      background: linear-gradient(135deg, #0056b3 0%, #0074d9 100%);
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
       color: #fff;
       text-align: center;
-      padding: 4rem 2rem;
-      border-radius: 12px;
-      margin: 2rem auto;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 5rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
       overflow: hidden;
     }
 
-    #hero img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
-      opacity: 0.95;
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232c3e50"/><path d="M0 50 L100 50 M50 0 L50 100" stroke="%2334495e" stroke-width="1"/></svg>') center/cover no-repeat;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    #hero>* {
+      position: relative;
+      z-index: 1;
     }
 
     #hero h2 {
-      font-size: 2.5rem;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
       margin-bottom: 1rem;
     }
 
     #hero p {
-      font-size: 1.1rem;
+      font-size: clamp(1rem, 3vw, 1.1rem);
       margin-bottom: 2rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
       opacity: 0.95;
     }
 
     .button {
-      background-color: #fff;
-      color: #0056b3;
-      padding: 0.8rem 1.8rem;
+      background: #ecf0f1;
+      color: #1a252f;
+      padding: 0.9rem 2rem;
+      border-radius: 6px;
       font-weight: 600;
+      border: 2px solid #ecf0f1;
       text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s ease;
+      transition: 0.3s;
       display: inline-block;
+      cursor: pointer;
     }
 
     .button:hover {
-      background-color: #e8f1ff;
+      background: transparent;
+      color: #ecf0f1;
       transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #ecf0f1;
+    }
+
+    .button-outline:hover {
+      background: #ecf0f1;
+      color: #2c3e50;
     }
 
     /* ===== SERVICES ===== */
-    #services {
-      text-align: center;
-    }
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
     }
 
     .service-card {
       background: #fff;
+      border: 1px solid #ecf0f1;
       border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
       overflow: hidden;
-      transition: all 0.3s ease;
     }
 
     .service-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .service-card img {
-      border-bottom: 4px solid #0056b3;
+    .service-card-header {
       height: 200px;
-      object-fit: cover;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .service-card-content {
+      padding: 1.5rem;
+      text-align: center;
     }
 
     .service-card h3 {
       font-size: 1.3rem;
-      margin-top: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .service-card p {
-      padding: 0 1rem 1.5rem;
       font-size: 0.95rem;
+      color: #7f8c8d;
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
     }
 
     /* ===== ABOUT ===== */
@@ -209,10 +332,15 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 2rem;
-      background-color: #fff;
+      background: #fff;
       border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      padding: 3rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 300px;
     }
 
     .about-content {
@@ -220,84 +348,400 @@
       min-width: 300px;
     }
 
-    .about-content p {
-      margin-bottom: 1rem;
-      line-height: 1.7;
+    .about-content ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .about-content li {
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .about-content i {
+      color: #2c3e50;
+      margin-right: 0.8rem;
+    }
+
+    /* ===== PROJECTS GALLERY ===== */
+    #projects {
+      background: #fff;
+      border-radius: 10px;
+      padding: 3rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-item {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-item img {
+      height: 200px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .project-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(26, 37, 47, 0.8);
+      color: white;
+      padding: 1rem;
+      transform: translateY(100%);
+      transition: 0.3s;
+    }
+
+    .project-item:hover .project-overlay {
+      transform: translateY(0);
+    }
+
+    /* ===== VIDEO SECTION ===== */
+    #video-showcase {
+      background: #fff;
+      border-radius: 10px;
+      padding: 3rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
     /* ===== CONTACT ===== */
     #contact {
-      background-color: #e9f2fa;
+      background: #ecf0f1;
       border-radius: 10px;
-      padding: 2rem;
-      margin-top: 2rem;
+      padding: 3rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
-    .contact-card {
+    .contact-container {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
+      gap: 3rem;
+    }
+
+    .contact-form {
+      flex: 1;
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      min-width: 300px;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      transition: 0.3s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #2c3e50;
+      box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
     }
 
     .contact-info {
       flex: 1;
-      min-width: 280px;
+      min-width: 300px;
     }
 
-    .contact-info ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0;
+    .contact-details {
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .contact-info li {
-      margin-bottom: 0.75rem;
-      font-size: 0.95rem;
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
     }
 
-    .contact-info a {
-      color: #0056b3;
-      text-decoration: none;
-      font-weight: 500;
+    .contact-item i {
+      background: #2c3e50;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      flex-shrink: 0;
     }
 
-    .contact-info a:hover {
-      text-decoration: underline;
+    /* ===== WHATSAPP FLOATING BUTTON ===== */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* ===== CALL FLOATING BUTTON ===== */
+    .call-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 100px;
+      right: 25px;
+      background-color: #2c3e50;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .call-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      background-color: #1a252f;
     }
 
     /* ===== FOOTER ===== */
     footer {
-      background-color: #003f7f;
+      background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
       color: #fff;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.9rem;
-      border-top: 4px solid #0056b3;
-      margin-top: 3rem;
-      animation: fadeInFooter 0.6s ease-in-out;
+      padding: 3rem 1rem 2rem;
     }
 
-    footer a {
-      color: #ffd700;
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-col h3 {
+      margin-bottom: 1rem;
+      color: #ecf0f1;
+    }
+
+    .footer-col a {
+      color: #fff;
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: 0.3s;
     }
 
-    footer a:hover {
+    .footer-col a:hover {
+      color: #ecf0f1;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      margin-right: 0.5rem;
       color: #fff;
+      transition: 0.3s;
     }
 
-    @keyframes fadeInFooter {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
+    .social-links a:hover {
+      background: #ecf0f1;
+      color: #1a252f;
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* ===== RESPONSIVE MEDIA QUERIES ===== */
+    @media (max-width: 768px) {
+      main {
+        padding: 1rem 0.5rem;
       }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      section {
+        margin-bottom: 3rem;
       }
+
+      #hero {
+        padding: 3rem 1.5rem;
+        border-radius: 8px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      #about {
+        padding: 2rem;
+        flex-direction: column;
+      }
+
+      .about-image,
+      .about-content {
+        min-width: 100%;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      #video-showcase,
+      #projects,
+      #contact {
+        padding: 2rem 1.5rem;
+      }
+
+      .contact-container {
+        gap: 2rem;
+      }
+
+      .contact-form,
+      .contact-info {
+        min-width: 100%;
+      }
+
+      .whatsapp-float,
+      .call-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .call-float {
+        bottom: 85px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      .service-card-header {
+        height: 180px;
+      }
+
+      .project-item img {
+        height: 180px;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -305,83 +749,298 @@
 <body>
   <header>
     <div class="navbar-container">
-      <h1 class="logo">Solotec E&E Ltd</h1>
+      <h1 class="logo"><i class="fa-solid fa-bolt"></i> Solotec E&E Ltd</h1>
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+        <ul id="nav-menu">
+          <button class="close-menu" id="closeMenuBtn"><i class="fa-solid fa-times"></i></button>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+
   <main>
     <section id="hero">
-      <img src="hmm.jpg" alt="Solar panels installed on rooftop">
-      <h2>Reliable Solar Installation in Your Area</h2>
-      <p>Power your home or business with clean, renewable energy. Trusted by your community for over 10 years.</p>
-      <a href="/contact.html" class="button">Get a Free Quote</a>
+      <h2>Powering Nigeria with Reliable Solar & Electrical Solutions</h2>
+      <p>From solar installations to complete electrical wiring, we provide professional, affordable services for homes
+        and businesses across Nigeria.</p>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a href="#contact" class="button">Get a Free Quote</a>
+        <a href="https://wa.me/2348012345678?text=Hello%20Solotec%20E%26E%20Ltd,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+          class="button-outline" target="_blank">Chat on WhatsApp</a>
+      </div>
     </section>
 
     <section id="services">
-      <h2>Our Services</h2>
+      <h2 class="section-title">Our Specialized Services</h2>
       <div class="services-grid">
         <div class="service-card">
-          <img src="hmm.jpg" alt="Residential Solar Installation">
-          <h3>Residential Solar Installation</h3>
-          <p>Custom solar panel systems for homes to reduce energy bills and promote sustainability.</p>
+          <div class="service-card-header">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXIlMjBwYW5lbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Solar Panel Installation" loading="lazy">
+          </div>
+          <div class="service-card-content">
+            <i class="fa-solid fa-solar-panel service-icon"></i>
+            <h3>Solar Power Systems</h3>
+            <p>Complete solar solutions including panels, inverters, batteries, and maintenance.</p>
+          </div>
         </div>
-
         <div class="service-card">
-          <img src="molo.jpg" alt="Commercial Solar Electrical & Electronics Limited">
-          <h3>Commercial Solar Electrical & Electronics Limited</h3>
-          <p>Scalable solar installations for businesses to lower operational costs and meet green energy goals.</p>
+          <div class="service-card-header">
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3RyaWNhbCUyMHdpcmluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Electrical Wiring" loading="lazy">
+          </div>
+          <div class="service-card-content">
+            <i class="fa-solid fa-plug service-icon"></i>
+            <h3>Electrical Wiring</h3>
+            <p>Professional wiring for new constructions and upgrades with safety as top priority.</p>
+          </div>
         </div>
-
         <div class="service-card">
-          <img src="solo.png" alt="Solar Maintenance & Repairs">
-          <h3>Solar Maintenance & Repairs</h3>
-          <p>Ongoing support to ensure your solar system performs optimally year-round.</p>
+          <div class="service-card-header">
+            <img src="https://images.unsplash.com/photo-1581574207993-9a27e3b1fa1a?auto=format&fit=crop&w=800&q=80" alt="Home Appliance Installation" loading="lazy">
+          </div>
+          <div class="service-card-content">
+            <i class="fa-solid fa-house-chimney service-icon"></i>
+            <h3>Home Appliance Installation</h3>
+            <p>Installation of ACs, water heaters, and security systems with expert precision.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="about">
-      <img src="solo.png" alt="Solar installation team working on panels" width="400">
+      <div class="about-image">
+        <img
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23f5f7fa'/><text x='300' y='200' font-family='Arial' font-size='24' text-anchor='middle' fill='%232c3e50'>Our Team</text></svg>"
+          alt="Our Team" loading="lazy">
+      </div>
       <div class="about-content">
-        <h2>About Us</h2>
-        <p>We’re a family-owned business dedicated to providing honest, professional solar installation services. With
-          over a decade of experience, we specialize in solar solutions that save money and reduce your carbon footprint.</p>
-        <p>Our certified technicians ensure every installation is done to the highest standards, using the latest solar
-          technology and premium materials.</p>
+        <h2>About Solotec Electrical & Electronics Engineering Limited</h2>
+        <p>Founded in Nigeria, Solotec E&E Ltd has been providing reliable electrical and solar solutions for over a
+          decade. We're committed to powering homes and businesses with sustainable, efficient systems.</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 10+ years of experience</li>
+          <li><i class="fa-solid fa-check"></i> Certified & licensed technicians</li>
+          <li><i class="fa-solid fa-check"></i> Quality materials & workmanship</li>
+          <li><i class="fa-solid fa-check"></i> After-sales support</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Our Projects</h2>
+      <div class="projects-grid">
+        <div class="project-item">
+          <img src="https://images.unsplash.com/photo-1548674841-9890b96bd8e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVzaWRlbnRpYWwlMjBzb2xhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80" alt="Residential Solar Installation" loading="lazy">
+          <div class="project-overlay">
+            <h4>Residential Solar System</h4>
+            <p>Complete home solar installation in Lagos</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25856cd63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbWVyY2lhbCUyMGVsZWN0cmljYWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&h=300&q=80" alt="Commercial Electrical Wiring" loading="lazy">
+          <div class="project-overlay">
+            <h4>Commercial Electrical Wiring</h4>
+            <p>Office building electrical system in Abuja</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="https://images.unsplash.com/photo-1611269154420-8a98e6a4e35f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXIlMjB3YXRlciUyMGhlYXRlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80" alt="Solar Water Heater Installation" loading="lazy">
+          <div class="project-overlay">
+            <h4>Solar Water Heater Installation</h4>
+            <p>Eco-friendly water heating solution</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="https://images.unsplash.com/photo-1621905251180-73ccfd099542?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja3VwJTIwcG93ZXIlMjBzeXN0ZW18ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&h=300&q=80" alt="Backup Power System" loading="lazy">
+          <div class="project-overlay">
+            <h4>Backup Power System</h4>
+            <p>Uninterrupted power for critical applications</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video-showcase">
+      <h2 class="section-title">See Our Work in Action</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-grid">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
       </div>
     </section>
 
     <section id="contact">
-      <div class="contact-card">
-        <div class="contact-info">
-          <h2>Contact Us</h2>
-          <p>Have questions or ready to go solar? Reach out to us — we’d love to help.</p>
-          <ul>
-            <li><strong>📞 Phone:</strong> <a href="tel:+23481684">(555) 123-4567</a></li>
-            <li><strong>📧 Email:</strong> <a href="mailto:info@Solotec.com">info@Solotec.com</a></li>
-            <li><strong>📍 Address:</strong> 123 Main Street, Your City, ST 12345</li>
-          </ul>
-          <a href="mailto:info@Solotec.com" class="button">Get a Free Quote</a>
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-container">
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm">
+            <div class="form-group"><label>Full Name</label><input type="text" class="form-control" required></div>
+            <div class="form-group"><label>Email Address</label><input type="email" class="form-control" required></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" class="form-control" required></div>
+            <div class="form-group"><label>Service Needed</label>
+              <select class="form-control" required>
+                <option>Select a service</option>
+                <option>Solar Installation</option>
+                <option>Electrical Wiring</option>
+                <option>Appliance Installation</option>
+                <option>Maintenance</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Message</label><textarea class="form-control" rows="4"></textarea></div>
+            <button type="submit" class="button" style="width:100%;">Send Message</button>
+          </form>
         </div>
-        <div class="contact-image">
-          <img src="molo.jpg" alt="Customer contacting SolarTech Electrical & Electronics Limited" width="500" height="300" />
+        <div class="contact-info">
+          <div class="contact-details">
+            <h3>Get In Touch</h3>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Our Location</h4>
+                <p>123 Electrical Avenue, Lagos, Nigeria</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone Number</h4>
+                <p>+234 801 234 5678</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email Address</h4>
+                <p>solotecelectricalltd@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Working Hours</h4>
+                <p>Monday - Friday: 8am - 6pm</p>
+                <p>Saturday: 9am - 2pm</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/2348012345678?text=Hello%20Solotec%20E%26E%20Ltd,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+    class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Call Floating Button -->
+  <a href="tel:+2348012345678" class="call-float">
+    <i class="fas fa-phone"></i>
+  </a>
+
   <footer>
-    <p>&copy; 2025 Solotec Electrical & Electronics Engineering Limited | All Rights Reserved |
-      <a href="/privacy.html">Privacy Policy</a></p>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Solotec E&E Ltd</h3>
+        <p>Reliable solar and electrical solutions powering Nigeria since 2010.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Solotec Electrical & Electronics Engineering Limited. All Rights Reserved.
+    </div>
   </footer>
+
+
+  <script>
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // In a real implementation, you would send the form data to a server
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
+      });
+    }
+
+    // Performance optimization - lazy load images when they enter viewport
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+  </script>
 </body>
 
 </html>
