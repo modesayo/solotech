@@ -1,1046 +1,1208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solotec Electrical & Electronics Engineering Limited | Professional Solar & Electrical Services in Nigeria
-  </title>
-  <meta name="description"
-    content="Expert solar panel installation, electrical wiring, and home appliance services in Nigeria. Reliable, affordable, and high-quality electrical & electronics solutions for homes and businesses. Call Solotec Electrical & Electronics Engineering Limited today!" />
-  <link rel="canonical" href="https://www.solotec.com/" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Solotec E&E Ltd — Professional Solar & Electrical Services</title>
+  <meta name="description" content="Solotec Electrical & Electronics Engineering Limited — professional solar, CCTV, alarms, wiring, smart home installations across Nigeria." />
+  <meta name="theme-color" content="#1a252f" />
 
-  <!-- Preload critical resources -->
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-    as="style">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style">
-
-  <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    /* ====== RESET ====== */
+    :root {
+      --bg: #f7fafc;
+      --muted: #6c757d;
+      --accent: #25d366;
+      --accent-dark: #128c7e;
+      --dark: #1a252f;
+      --dark-light: #2c3e50;
+      --card: #ffffff;
+      --max-width: 1200px;
+      --radius: 12px;
+      --gap: 1.5rem;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+    
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-
+    
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+    
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f5f7fa;
-      color: #2c3e50;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--bg);
+      color: var(--dark);
       line-height: 1.6;
-      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    img {
-      width: 100%;
-      border-radius: 6px;
-      height: auto;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-family: 'Playfair Display', serif;
-      color: #1a252f;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    section {
-      margin-bottom: 4rem;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      position: relative;
-      font-weight: 700;
-    }
-
-    .section-title::after {
-      content: '';
-      width: 80px;
-      height: 3px;
-      background: #7f8c8d;
-      display: block;
-      margin: 0.5rem auto 0;
-      border-radius: 2px;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
-      color: #fff;
-      padding: 1rem 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      color: #fff;
+    a {
+      color: inherit;
       text-decoration: none;
     }
 
-    .logo i {
-      color: #ecf0f1;
-      font-size: 1.6rem;
+    /* Container */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
     }
 
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--dark), var(--dark-light));
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+    }
+    
+    .brand {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: #ecf0f1;
+      color: var(--dark);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .brand-text {
+      line-height: 1.2;
+    }
+    
+    .brand-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    
+    .brand-tagline {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 2px;
+    }
+    
     nav ul {
       list-style: none;
       display: flex;
       gap: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
-
+    
     nav a {
       color: #fff;
-      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
       font-weight: 500;
-      position: relative;
-      padding: 0.5rem 0;
+      transition: all 0.2s ease;
+    }
+    
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .cta {
+      background: #fff;
+      color: var(--dark);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
 
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: #ecf0f1;
-      transition: 0.3s;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .mobile-menu-btn {
+    /* Mobile Menu */
+    .hamburger {
       display: none;
-      background: none;
-      border: none;
+      background: transparent;
+      border: 0;
       color: #fff;
       font-size: 1.5rem;
       cursor: pointer;
-      z-index: 1001;
     }
 
-    /* Mobile Navigation */
-    @media (max-width: 768px) {
-      .mobile-menu-btn {
-        display: block;
-      }
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #1a252f;
-        padding: 5rem 2rem 2rem;
-        z-index: 999;
-        overflow-y: auto;
-      }
-
-      nav ul.active {
-        display: flex;
-      }
-
-      nav ul li {
-        margin-bottom: 1.5rem;
-      }
-
-      nav ul li a {
-        font-size: 1.2rem;
-        padding: 0.8rem 0;
-        display: block;
-      }
-
-      .close-menu {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-    }
-
-    /* ===== HERO ===== */
-    #hero {
-      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-      color: #fff;
-      text-align: center;
-      padding: 5rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    /* Hero Section */
+    .hero {
+      padding: 4rem 1.5rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      background: linear-gradient(135deg, #ffffff, #f1f6f9);
+      box-shadow: var(--shadow-lg);
       position: relative;
       overflow: hidden;
     }
-
-    #hero::before {
+    
+    .hero::before {
       content: '';
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232c3e50"/><path d="M0 50 L100 50 M50 0 L50 100" stroke="%2334495e" stroke-width="1"/></svg>') center/cover no-repeat;
-      opacity: 0.1;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(26, 37, 47, 0.03), transparent);
       z-index: 0;
     }
-
-    #hero>* {
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 2.5rem;
+      align-items: center;
       position: relative;
       z-index: 1;
     }
-
-    #hero h2 {
-      font-size: clamp(1.8rem, 5vw, 2.6rem);
+    
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
       margin-bottom: 1rem;
+      line-height: 1.2;
+      color: var(--dark);
     }
-
-    #hero p {
-      font-size: clamp(1rem, 3vw, 1.1rem);
-      margin-bottom: 2rem;
-      opacity: 0.95;
+    
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
     }
-
-    .button {
-      background: #ecf0f1;
-      color: #1a252f;
-      padding: 0.9rem 2rem;
-      border-radius: 6px;
-      font-weight: 600;
-      border: 2px solid #ecf0f1;
-      text-decoration: none;
-      transition: 0.3s;
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .button:hover {
-      background: transparent;
-      color: #ecf0f1;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .button-outline {
-      background: transparent;
-      color: #fff;
-      border: 2px solid #ecf0f1;
-    }
-
-    .button-outline:hover {
-      background: #ecf0f1;
-      color: #2c3e50;
-    }
-
-    /* ===== SERVICES ===== */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-card {
-      background: #fff;
-      border: 1px solid #ecf0f1;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: 0.3s;
-      overflow: hidden;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .service-card-header {
-      height: 200px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .service-card-content {
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .service-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .service-card p {
-      font-size: 0.95rem;
-      color: #7f8c8d;
-    }
-
-    .service-icon {
-      font-size: 2rem;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-
-    /* ===== ABOUT ===== */
-    #about {
+    
+    .hero-actions {
       display: flex;
+      gap: 1rem;
       flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+      display: inline-flex;
       align-items: center;
-      gap: 2rem;
-      background: #fff;
+      gap: 0.6rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 10px;
-      padding: 3rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border: 0;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      font-size: 1rem;
     }
-
-    .about-image {
-      flex: 1;
-      min-width: 300px;
+    
+    .btn-primary {
+      background: var(--dark);
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(26, 37, 47, 0.2);
     }
-
-    .about-content {
-      flex: 1;
-      min-width: 300px;
+    
+    .btn-primary:hover {
+      background: var(--dark-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(26, 37, 47, 0.3);
     }
-
-    .about-content ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 1rem;
+    
+    .btn-ghost {
+      background: transparent;
+      border: 2px solid var(--dark);
+      color: var(--dark);
     }
-
-    .about-content li {
-      margin-bottom: 0.8rem;
+    
+    .btn-ghost:hover {
+      background: var(--dark);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    
+    .hero-features {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .feature {
       display: flex;
       align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    
+    .feature i {
+      color: var(--accent);
     }
 
-    .about-content i {
-      color: #2c3e50;
-      margin-right: 0.8rem;
-    }
-
-    /* ===== PROJECTS GALLERY ===== */
-    #projects {
-      background: #fff;
-      border-radius: 10px;
-      padding: 3rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project-item {
-      border-radius: 8px;
+    /* Gallery Card */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      transition: 0.3s;
-      position: relative;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .project-item:hover {
+    
+    .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: var(--shadow-lg);
     }
 
-    .project-item img {
-      height: 200px;
-      object-fit: cover;
-      transition: 0.3s;
+    /* Sections */
+    .section {
+      margin: 4rem 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    .project-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .project-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(26, 37, 47, 0.8);
-      color: white;
-      padding: 1rem;
-      transform: translateY(100%);
-      transition: 0.3s;
-    }
-
-    .project-item:hover .project-overlay {
-      transform: translateY(0);
-    }
-
-    /* ===== VIDEO SECTION ===== */
-    #video-showcase {
-      background: #fff;
-      border-radius: 10px;
-      padding: 3rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      /* 16:9 aspect ratio */
-      height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .video-grid {
+    /* Services */
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
-      margin-top: 2rem;
     }
-
-    /* ===== CONTACT ===== */
-    #contact {
-      background: #ecf0f1;
-      border-radius: 10px;
-      padding: 3rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .contact-container {
+    
+    .service {
+      padding: 1.5rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 3rem;
-    }
-
-    .contact-form {
-      flex: 1;
-      background: #fff;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-      min-width: 300px;
-    }
-
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-
-    .form-group label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 0.8rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      transition: 0.3s;
-    }
-
-    .form-control:focus {
-      outline: none;
-      border-color: #2c3e50;
-      box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
-    }
-
-    .contact-info {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .contact-details {
-      background: #fff;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .contact-item {
-      display: flex;
+      gap: 1.25rem;
       align-items: flex-start;
-      margin-bottom: 1.5rem;
+      height: 100%;
+      transition: all 0.3s ease;
     }
-
-    .contact-item i {
-      background: #2c3e50;
-      color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 1rem;
+    
+    .service:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #f1f6f9, #e3ecf3);
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      color: var(--dark);
       flex-shrink: 0;
     }
-
-    /* ===== WHATSAPP FLOATING BUTTON ===== */
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366;
-      color: #FFF;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      animation: pulse 2s infinite;
+    
+    .service h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+      color: var(--dark);
     }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    
+    .service p {
+      margin: 0 0 1rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      }
-
-      70% {
-        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-      }
-
-      100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
+    
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 0.5rem;
     }
-
-    /* ===== CALL FLOATING BUTTON ===== */
-    .call-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 100px;
-      right: 25px;
-      background-color: #2c3e50;
-      color: #FFF;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 25px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    
+    .thumb {
+      height: 80px;
+      overflow: hidden;
+      border-radius: 8px;
+      display: block;
       transition: all 0.3s ease;
     }
-
-    .call-float:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      background-color: #1a252f;
+    
+    .thumb:hover {
+      transform: scale(1.05);
+    }
+    
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+    /* Projects & Videos */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .media {
+      height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .media video, .media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    
+    .media:hover img, .media:hover video {
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 2rem;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+    
+    input, textarea, select {
+      padding: 0.85rem;
+      border-radius: 8px;
+      border: 1px solid #e1e8ed;
+      font-family: inherit;
+      font-size: 1rem;
+      width: 100%;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--dark);
+      box-shadow: 0 0 0 3px rgba(26, 37, 47, 0.1);
+    }
+    
+    button[type=submit] {
+      background: var(--dark);
       color: #fff;
-      padding: 3rem 1rem 2rem;
+      padding: 0.9rem;
+      border-radius: 8px;
+      border: 0;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    button[type=submit]:hover {
+      background: var(--dark-light);
+      transform: translateY(-2px);
     }
 
-    .footer-container {
-      max-width: 1200px;
-      margin: auto;
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      background: linear-gradient(135deg, var(--dark), var(--dark-light));
+      color: #fff;
+      padding: 3rem 0 1.5rem;
+      border-radius: 16px 16px 0 0;
+    }
+    
+    .footer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
+      margin-bottom: 2rem;
     }
-
-    .footer-col h3 {
-      margin-bottom: 1rem;
-      color: #ecf0f1;
-    }
-
-    .footer-col a {
-      color: #fff;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .footer-col a:hover {
-      color: #ecf0f1;
-    }
-
-    .social-links a {
-      display: inline-flex;
+    
+    .footer-logo {
+      display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-logo .logo {
       width: 40px;
       height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      margin-right: 0.5rem;
+    }
+    
+    .footer-logo-text {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    
+    footer h3, footer h4 {
+      margin-bottom: 1rem;
       color: #fff;
-      transition: 0.3s;
     }
-
-    .social-links a:hover {
-      background: #ecf0f1;
-      color: #1a252f;
-      transform: translateY(-3px);
+    
+    footer p {
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 1rem;
     }
-
+    
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    footer li {
+      margin-bottom: 0.5rem;
+    }
+    
+    footer a {
+      color: rgba(255, 255, 255, 0.85);
+      transition: color 0.2s ease;
+    }
+    
+    footer a:hover {
+      color: #fff;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      transition: all 0.2s ease;
+    }
+    
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+    
     .copyright {
       text-align: center;
-      margin-top: 2rem;
+      color: rgba(255, 255, 255, 0.7);
+      padding-top: 1.5rem;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 1rem;
-      font-size: 0.9rem;
     }
 
-    /* ===== RESPONSIVE MEDIA QUERIES ===== */
-    @media (max-width: 768px) {
-      main {
-        padding: 1rem 0.5rem;
-      }
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      place-items: center;
+      padding: 1.5rem;
+      z-index: 1000;
+    }
+    
+    .lightbox img {
+      max-width: 95%;
+      max-height: 95%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .lightbox.show {
+      display: grid;
+    }
+    
+    #closeLightbox {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 0;
+      color: #fff;
+      font-size: 1.5rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: grid;
+      place-items: center;
+    }
+    
+    #closeLightbox:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
 
-      section {
-        margin-bottom: 3rem;
-      }
+    /* Floating Actions */
+    .float-actions {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      z-index: 100;
+    }
+    
+    .float-actions a {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+    
+    .float-actions a:hover {
+      transform: scale(1.1);
+    }
+    
+    .whatsapp {
+      background: var(--accent);
+    }
+    
+    .whatsapp:hover {
+      background: var(--accent-dark);
+    }
+    
+    .call {
+      background: var(--dark);
+    }
+    
+    .call:hover {
+      background: var(--dark-light);
+    }
 
-      #hero {
-        padding: 3rem 1.5rem;
-        border-radius: 8px;
-      }
-
-      .services-grid {
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      #about {
-        padding: 2rem;
-        flex-direction: column;
-      }
-
-      .about-image,
-      .about-content {
-        min-width: 100%;
-      }
-
-      .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1rem;
-      }
-
-      #video-showcase,
-      #projects,
-      #contact {
-        padding: 2rem 1.5rem;
-      }
-
-      .contact-container {
         gap: 2rem;
       }
-
-      .contact-form,
-      .contact-info {
-        min-width: 100%;
-      }
-
-      .whatsapp-float,
-      .call-float {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        bottom: 20px;
-        right: 20px;
-      }
-
-      .call-float {
-        bottom: 85px;
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
     }
-
-    @media (max-width: 480px) {
-      .logo {
-        font-size: 1.5rem;
+    
+    @media (max-width: 768px) {
+      .nav {
+        padding: 0.75rem 1rem;
       }
-
+      
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--dark);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      nav ul.show {
+        display: flex;
+      }
+      
+      .hamburger {
+        display: inline-block;
+      }
+      
+      .hero {
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+      }
+      
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      
+      .thumb {
+        height: 70px;
+      }
+      
+      .media {
+        height: 180px;
+      }
+      
+      .section {
+        margin: 3rem 0;
+      }
+      
       .section-title {
-        font-size: 1.5rem;
-      }
-
-      .button {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-      }
-
-      .service-card-header {
-        height: 180px;
-      }
-
-      .project-item img {
-        height: 180px;
+        font-size: 1.8rem;
       }
     }
-
-    html {
-      scroll-behavior: smooth;
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 1rem;
+      }
+      
+      .hero {
+        padding: 1.5rem 1rem;
+      }
+      
+      .service {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .service .icon {
+        margin: 0 auto;
+      }
+      
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .thumb {
+        height: 100px;
+      }
     }
   </style>
 </head>
-
 <body>
   <header>
-    <div class="navbar-container">
-      <h1 class="logo"><i class="fa-solid fa-bolt"></i> Solotec E&E Ltd</h1>
-      <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
-      <nav>
-        <ul id="nav-menu">
-          <button class="close-menu" id="closeMenuBtn"><i class="fa-solid fa-times"></i></button>
-          <li><a href="#hero">Home</a></li>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">SE</div>
+        <div class="brand-text">
+          <div class="brand-name">Solotec E&E Ltd</div>
+          <div class="brand-tagline">Electrical & Solar Solutions</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary">
+        <button class="hamburger" id="openMenu" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="menu">
           <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#videos">Videos</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a class="cta" href="#contact">Get Quote</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero card" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div>
+          <h1 id="hero-title">Professional Solar, Security & Electrical Installations Across Nigeria</h1>
+          <p>Solotec E&E Ltd delivers certified installations — fire alarms, CCTV, burglary alarms, solar systems, home & industrial wiring, smart homes and more. All images & videos are placeholders; replace them with your supplied files.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              <i class="fa-solid fa-paper-plane"></i> Request Quote
+            </a>
+            <a class="btn btn-ghost" href="#services">
+              <i class="fa-solid fa-wrench"></i> Our Services
+            </a>
+          </div>
+          <div class="hero-features">
+            <div class="feature">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Certified Technicians</span>
+            </div>
+            <div class="feature">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>After-sales Support</span>
+            </div>
+            <div class="feature">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Since 2010</span>
+            </div>
+          </div>
+        </div>
 
-  <main>
-    <section id="hero">
-      <h2>Powering Nigeria with Reliable Solar & Electrical Solutions</h2>
-      <p>From solar installations to complete electrical wiring, we provide professional, affordable services for homes
-        and businesses across Nigeria.</p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a href="#contact" class="button">Get a Free Quote</a>
-        <a href="https://wa.me/2348012345678?text=Hello%20Solotec%20E%26E%20Ltd,%20I%20would%20like%20to%20inquire%20about%20your%20services"
-          class="button-outline" target="_blank">Chat on WhatsApp</a>
+        <div class="card" style="padding: 0.75rem">
+          <!-- placeholder hero image (from user) -->
+          <div style="height: 280px; border-radius: 10px; overflow: hidden; background: #e9f0f4; display: grid; place-items: center">
+            <img src="/assets/molo.jpg" alt="Solotec team or hero image" style="width: 100%; height: 100%; object-fit: cover; display: block" loading="lazy">
+          </div>
+          <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem">
+            <img src="/assets/hmm.jpg" alt="project thumbnail" style="width: 50%; height: 90px; object-fit: cover; border-radius: 8px" loading="lazy">
+            <img src="/assets/solo.png" alt="project thumbnail" style="width: 50%; height: 90px; object-fit: cover; border-radius: 8px" loading="lazy">
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="services">
-      <h2 class="section-title">Our Specialized Services</h2>
+    <!-- SERVICES -->
+    <section id="services" class="section" aria-labelledby="services-title">
+      <div class="section-header">
+        <h2 id="services-title" class="section-title">Our Services</h2>
+        <p class="section-subtitle">Professional installations for residential, commercial & industrial clients</p>
+      </div>
+
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-card-header">
-            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXIlMjBwYW5lbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Solar Panel Installation" loading="lazy">
+        <!-- service item template: each service includes a small gallery of placeholders -->
+        <article class="card service" tabindex="0" data-service="fire-alarm">
+          <div class="icon"><i class="fa-solid fa-fire"></i></div>
+          <div>
+            <h3>Fire Alarm Systems</h3>
+            <p>Design, supply and professional installation of addressable and conventional fire detection systems.</p>
+            <div class="gallery" data-gallery="fire-alarm">
+              <a class="thumb" href="#" data-full="assets/firealarm-1.jpg">
+                <img src="/assets/alarm1.jpg" alt="Fire alarm 1" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/firealarm-2.jpg">
+                <img src="/assets/alarm.jpg" alt="Fire alarm 2" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/firealarm-3.jpg">
+                <img src="/assets/alarm2.jpg" alt="Fire alarm 3" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/firealarm-4.jpg">
+                <img src="/assets/alarm3.jpg" alt="Fire alarm 4" loading="lazy">
+              </a>
+            </div>
           </div>
-          <div class="service-card-content">
-            <i class="fa-solid fa-solar-panel service-icon"></i>
+        </article>
+
+        <article class="card service" tabindex="0" data-service="burglary-alarm">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <h3>Burglary & Intruder Alarms</h3>
+            <p>Alarm panels, sensors, remote monitoring and panic systems for homes and businesses.</p>
+            <div class="gallery" data-gallery="burglary-alarm">
+              <a class="thumb" href="#" data-full="assets/burglary-1.jpg">
+                <img src="/assets/fence.webp" alt="Burglary alarm 1" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/burglary-2.jpg">
+                <img src="/assets/fence1.webp" alt="Burglary alarm 2" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/burglary-3.jpg">
+                <img src="/assets/fence2.webp" alt="Burglary alarm 3" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card service" tabindex="0" data-service="cctv">
+          <div class="icon"><i class="fa-solid fa-camera"></i></div>
+          <div>
+            <h3>CCTV & IP Camera Systems</h3>
+            <p>Analog & IP CCTV systems, remote viewing, NVR/DVR supply and installation, cabling and setup.</p>
+            <div class="gallery" data-gallery="cctv">
+              <a class="thumb" href="#" data-full="assets/cctv-1.jpg">
+                <img src="/assets/camera.webp" alt="CCTV 1" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/cctv-2.jpg">
+                <img src="/assets/camera1.webp" alt="CCTV 2" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/cctv-3.jpg">
+                <img src="/assets/camera2.jpg" alt="CCTV 3" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/cctv-4.jpg">
+                <img src="/assets/camera3.jpg" alt="CCTV 4" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card service" tabindex="0" data-service="solar">
+          <div class="icon"><i class="fa-solid fa-solar-panel"></i></div>
+          <div>
             <h3>Solar Power Systems</h3>
-            <p>Complete solar solutions including panels, inverters, batteries, and maintenance.</p>
+            <p>End-to-end solar installations: PV modules, inverters, batteries, mounting and commissioning.</p>
+            <div class="gallery" data-gallery="solar">
+              <a class="thumb" href="#" data-full="assets/solar-1.jpg">
+                <img src="/assets/hmm.jpg" alt="Solar 1" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/solar-2.jpg">
+                <img src="/assets/solar.jpg" alt="Solar 2" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/solar-3.jpg">
+                <img src="/assets/solar1.webp" alt="Solar 3" loading="lazy">
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-header">
-            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3RyaWNhbCUyMHdpcmluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Electrical Wiring" loading="lazy">
+        </article>
+
+        <article class="card service" tabindex="0" data-service="home-wiring">
+          <div class="icon"><i class="fa-solid fa-plug"></i></div>
+          <div>
+            <h3>Home & Building Wiring</h3>
+            <p>New installations and re-wires, distribution boards, surge protection and meter services.</p>
+            <div class="gallery" data-gallery="home-wiring">
+              <a class="thumb" href="#" data-full="assets/wiring-1.jpg">
+                <img src="/assets/hmm.jpg" alt="Wiring 1" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/wiring-2.jpg">
+                <img src="assets/wiring-2-thumb.jpg" alt="Wiring 2" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/wiring-3.jpg">
+                <img src="assets/wiring-3-thumb.jpg" alt="Wiring 3" loading="lazy">
+              </a>
+            </div>
           </div>
-          <div class="service-card-content">
-            <i class="fa-solid fa-plug service-icon"></i>
-            <h3>Electrical Wiring</h3>
-            <p>Professional wiring for new constructions and upgrades with safety as top priority.</p>
+        </article>
+
+        <article class="card service" tabindex="0" data-service="industrial">
+          <div class="icon"><i class="fa-solid fa-industry"></i></div>
+          <div>
+            <h3>Industrial & Commercial Work</h3>
+            <p>High-voltage distribution, control panels, generators, UPS and critical-power installations.</p>
+            <div class="gallery" data-gallery="industrial">
+              <a class="thumb" href="#" data-full="assets/industrial-1.jpg">
+                <img src="assets/industrial-1-thumb.jpg" alt="Industrial 1" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/industrial-2.jpg">
+                <img src="assets/industrial-2-thumb.jpg" alt="Industrial 2" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/industrial-3.jpg">
+                <img src="assets/industrial-3-thumb.jpg" alt="Industrial 3" loading="lazy">
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-header">
-            <img src="https://images.unsplash.com/photo-1581574207993-9a27e3b1fa1a?auto=format&fit=crop&w=800&q=80" alt="Home Appliance Installation" loading="lazy">
+        </article>
+
+        <article class="card service" tabindex="0" data-service="smart-home">
+          <div class="icon"><i class="fa-solid fa-house-laptop"></i></div>
+          <div>
+            <h3>Smart Home Appliances & Automation</h3>
+            <p>Smart thermostats, lighting control, smart locks, motorized shades, voice integration and IoT installs.</p>
+            <div class="gallery" data-gallery="smart-home">
+              <a class="thumb" href="#" data-full="assets/smart-1.jpg">
+                <img src="assets/smart-1-thumb.jpg" alt="Smart 1" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/smart-2.jpg">
+                <img src="assets/smart-2-thumb.jpg" alt="Smart 2" loading="lazy">
+              </a>
+              <a class="thumb" href="#" data-full="assets/smart-3.jpg">
+                <img src="assets/smart-3-thumb.jpg" alt="Smart 3" loading="lazy">
+              </a>
+            </div>
           </div>
-          <div class="service-card-content">
-            <i class="fa-solid fa-house-chimney service-icon"></i>
-            <h3>Home Appliance Installation</h3>
-            <p>Installation of ACs, water heaters, and security systems with expert precision.</p>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section id="about">
-      <div class="about-image">
-        <img
-          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23f5f7fa'/><text x='300' y='200' font-family='Arial' font-size='24' text-anchor='middle' fill='%232c3e50'>Our Team</text></svg>"
-          alt="Our Team" loading="lazy">
+    <!-- Projects & Videos -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-subtitle">Recent installations showcasing our expertise and quality workmanship</p>
       </div>
-      <div class="about-content">
-        <h2>About Solotec Electrical & Electronics Engineering Limited</h2>
-        <p>Founded in Nigeria, Solotec E&E Ltd has been providing reliable electrical and solar solutions for over a
-          decade. We're committed to powering homes and businesses with sustainable, efficient systems.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> 10+ years of experience</li>
-          <li><i class="fa-solid fa-check"></i> Certified & licensed technicians</li>
-          <li><i class="fa-solid fa-check"></i> Quality materials & workmanship</li>
-          <li><i class="fa-solid fa-check"></i> After-sales support</li>
-        </ul>
-      </div>
-    </section>
 
-    <section id="projects">
-      <h2 class="section-title">Our Projects</h2>
       <div class="projects-grid">
-        <div class="project-item">
-          <img src="https://images.unsplash.com/photo-1548674841-9890b96bd8e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVzaWRlbnRpYWwlMjBzb2xhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80" alt="Residential Solar Installation" loading="lazy">
-          <div class="project-overlay">
-            <h4>Residential Solar System</h4>
-            <p>Complete home solar installation in Lagos</p>
-          </div>
+        <div class="card media"><img src="assets/project-1.jpg" alt="Project 1" loading="lazy"></div>
+        <div class="card media"><img src="assets/project-2.jpg" alt="Project 2" loading="lazy"></div>
+        <div class="card media"><img src="assets/project-3.jpg" alt="Project 3" loading="lazy"></div>
+        <div class="card media"><img src="assets/project-4.jpg" alt="Project 4" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section id="videos" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Work Videos</h2>
+        <p class="section-subtitle">See our installations in action - from planning to completion</p>
+      </div>
+      <div class="projects-grid">
+        <div class="card media">
+          <video controls poster="/assets/automation.webp">
+            <source src="/assets/automation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
-        <div class="project-item">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25856cd63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbWVyY2lhbCUyMGVsZWN0cmljYWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&h=300&q=80" alt="Commercial Electrical Wiring" loading="lazy">
-          <div class="project-overlay">
-            <h4>Commercial Electrical Wiring</h4>
-            <p>Office building electrical system in Abuja</p>
-          </div>
+        <div class="card media">
+          <video controls poster="assets/videos/video-2-poster.jpg">
+            <source src="assets/videos/cctv-installation.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="project-item">
-          <img src="https://images.unsplash.com/photo-1611269154420-8a98e6a4e35f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXIlMjB3YXRlciUyMGhlYXRlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80" alt="Solar Water Heater Installation" loading="lazy">
-          <div class="project-overlay">
-            <h4>Solar Water Heater Installation</h4>
-            <p>Eco-friendly water heating solution</p>
-          </div>
-        </div>
-        <div class="project-item">
-          <img src="https://images.unsplash.com/photo-1621905251180-73ccfd099542?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja3VwJTIwcG93ZXIlMjBzeXN0ZW18ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&h=300&q=80" alt="Backup Power System" loading="lazy">
-          <div class="project-overlay">
-            <h4>Backup Power System</h4>
-            <p>Uninterrupted power for critical applications</p>
-          </div>
+        <div class="card media">
+          <video controls poster="assets/videos/video-3-poster.jpg">
+            <source src="assets/videos/fire-alarm-demo.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </section>
 
-    <section id="video-showcase">
-      <h2 class="section-title">See Our Work in Action</h2>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy"></iframe>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Contact & Get A Quote</h2>
+        <p class="section-subtitle">We'll tailor a proposal after we review your site photos and requirements</p>
       </div>
-      <div class="video-grid">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
 
-    <section id="contact">
-      <h2 class="section-title">Contact Us</h2>
-      <div class="contact-container">
-        <div class="contact-form">
-          <h3>Send Us a Message</h3>
-          <form id="contactForm">
-            <div class="form-group"><label>Full Name</label><input type="text" class="form-control" required></div>
-            <div class="form-group"><label>Email Address</label><input type="email" class="form-control" required></div>
-            <div class="form-group"><label>Phone Number</label><input type="tel" class="form-control" required></div>
-            <div class="form-group"><label>Service Needed</label>
-              <select class="form-control" required>
-                <option>Select a service</option>
-                <option>Solar Installation</option>
-                <option>Electrical Wiring</option>
-                <option>Appliance Installation</option>
-                <option>Maintenance</option>
-              </select>
-            </div>
-            <div class="form-group"><label>Message</label><textarea class="form-control" rows="4"></textarea></div>
-            <button type="submit" class="button" style="width:100%;">Send Message</button>
-          </form>
-        </div>
-        <div class="contact-info">
-          <div class="contact-details">
-            <h3>Get In Touch</h3>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Our Location</h4>
-                <p>beside NNPC , Isakle Oko ,shaganmu, Ogun, Nigeria</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <div>
-                <h4>Phone Number</h4>
-                <p>+2348168484050</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h4>Email Address</h4>
-                <p>solotecelectricalltd@gmail.com</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-clock"></i>
-              <div>
-                <h4>Working Hours</h4>
-                <p>Monday - Friday: 8am - 6pm</p>
-                <p>Saturday: 8am - 5pm</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="contact-grid">
+        <form class="card" aria-label="Contact form" id="contactForm" style="padding: 1.5rem">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="Jane Doe">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required placeholder="+234 812 345 6789">
+
+          <label for="service">Service interested in</label>
+          <select id="service" name="service">
+            <option>Solar Installation</option>
+            <option>Fire Alarm</option>
+            <option>CCTV</option>
+            <option>Burglary Alarm</option>
+            <option>Home Wiring</option>
+            <option>Industrial</option>
+            <option>Smart Home</option>
+          </select>
+
+          <label for="message">Project details / Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about the site, size, location, photos you will send..."></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <aside class="card" style="padding: 1.5rem">
+          <h3>Contact Details</h3>
+          <p style="color: var(--muted)"><strong>Address:</strong> beside NNPC Round About Isale Oko, Shaganmu, Ogun, Nigeria</p>
+          <p style="color: var(--muted)"><strong>Phone:</strong> +234 816 848 4050</p>
+          <p style="color: var(--muted)"><strong>Email:</strong> solotecelectricalltd@gmail.com</p>
+          <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid #eef6fb">
+          <h4 style="margin: 0 0 .5rem 0">What to send</h4>
+          <ul style="color: var(--muted); margin: 0 0 1.5rem 1rem">
+            <li>4–8 photos per service area (roof, inverter, DB, meter, camera position)</li>
+            <li>Short videos (MP4) of the site if available</li>
+            <li>Site address and any access notes</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://wa.me/2348168484050?text=Hello%20Solotec%20E%26E" style="width: 100%; text-align: center">
+            <i class="fab fa-whatsapp"></i> Message us on WhatsApp
+          </a>
+        </aside>
       </div>
     </section>
   </main>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/2348168484050?text=Hello%20Solotec%20E%26E%20Ltd,%20I%20would%20like%20to%20inquire%20about%20your%20services"
-    class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- Call Floating Button -->
-  <a href="tel:+2348168484050" class="call-float">
-    <i class="fas fa-phone"></i>
-  </a>
-
+  <!-- footer -->
   <footer>
-    <div class="footer-container">
-      <div class="footer-col">
-        <h3>Solotec E&E Ltd</h3>
-        <p>Reliable solar and electrical solutions powering Nigeria since 2010.</p>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="logo">SE</div>
+          <div class="footer-logo-text">Solotec E&E Ltd</div>
+        </div>
+        <p>Reliable solar & electrical installations across Nigeria — since 2010.</p>
         <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
         </div>
       </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
+      <div>
+        <h4>Quick Links</h4>
         <ul>
-          <li><a href="#hero">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Us</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#videos">Videos</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Solar Systems</a></li>
+          <li><a href="#services">CCTV Installation</a></li>
+          <li><a href="#services">Fire Alarms</a></li>
+          <li><a href="#services">Smart Home</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <p><i class="fa-solid fa-location-dot" style="margin-right: 0.5rem"></i> Shaganmu, Ogun, Nigeria</p>
+        <p><i class="fa-solid fa-phone" style="margin-right: 0.5rem"></i> +234 816 848 4050</p>
+        <p><i class="fa-solid fa-envelope" style="margin-right: 0.5rem"></i> solotecelectricalltd@gmail.com</p>
+      </div>
     </div>
-    <div class="copyright">
-      © 2025 Solotec Electrical & Electronics Engineering Limited. All Rights Reserved.
+    <div class="copyright container">
+      © 2025 Solotec Electrical & Electronics Engineering Limited. All rights reserved.
     </div>
   </footer>
 
+  <!-- floating actions -->
+  <div class="float-actions">
+    <a class="whatsapp" href="https://wa.me/2348168484050?text=Hello%20Solotec" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a class="call" href="tel:+2348168484050" aria-label="Call">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button id="closeLightbox" aria-label="Close lightbox">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img src="" alt="" id="lightboxImage">
+  </div>
 
   <script>
-    // Mobile menu functionality
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const closeMenuBtn = document.getElementById('closeMenuBtn');
-    const navMenu = document.getElementById('nav-menu');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      navMenu.classList.add('active');
-      document.body.style.overflow = 'hidden';
+    // Mobile menu toggle
+    const openMenu = document.getElementById('openMenu');
+    const menu = document.getElementById('menu');
+    
+    openMenu && openMenu.addEventListener('click', () => {
+      menu.classList.toggle('show');
     });
 
-    closeMenuBtn.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      document.body.style.overflow = '';
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.hamburger')) {
+        menu.classList.remove('show');
+      }
     });
 
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        document.body.style.overflow = '';
-      });
-    });
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const closeLightbox = document.getElementById('closeLightbox');
 
-    // Form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
+    document.querySelectorAll('.thumb').forEach(t => {
+      t.addEventListener('click', (e) => {
         e.preventDefault();
-        // In a real implementation, you would send the form data to a server
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
+        const full = t.dataset.full || t.getAttribute('href');
+        lightboxImage.src = full;
+        lightboxImage.alt = t.querySelector('img')?.alt || 'Image';
+        lightbox.classList.add('show');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
       });
-    }
+    });
 
-    // Performance optimization - lazy load images when they enter viewport
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
+    closeLightbox.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+      document.body.style.overflow = ''; // Restore scrolling
+    });
 
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('show');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxImage.src = '';
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+    });
+
+    // Form handler
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks! Your message has been queued. Please attach any photos/videos when you reply on WhatsApp or by email.');
+      e.target.reset();
+    });
+
+    // Keyboard accessibility for cards
+    document.querySelectorAll('.service').forEach(card => {
+      card.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          const gallery = card.querySelector('.gallery .thumb');
+          gallery && gallery.click();
+        }
       });
-    }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
   </script>
 </body>
-
 </html>
